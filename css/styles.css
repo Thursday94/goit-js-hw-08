@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.gallery {
+    list-style: none;
+    padding: 24px;
+    margin: 0;
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    max-width: 1200px;
+    margin-inline: auto;
+}
+
+.gallery-item {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-link {
+    display: block;
+}
+
+
+.gallery-image {
+    width: 360px;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    cursor: zoom-in;
+}
+
+
+.gallery-item:hover .gallery-image {
+    transform: scale(1.02);
+    transition: transform .2s ease;
+}
